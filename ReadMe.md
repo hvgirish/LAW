@@ -1,105 +1,120 @@
-========================================================================
-       MICROSOFT FOUNDATION CLASS LIBRARY : law
-========================================================================
+
+-------------------------------------------------------------------------------------------------
 
 
-AppWizard has created this law application for you.  This application
-not only demonstrates the basics of using the Microsoft Foundation classes
-but is also a starting point for writing your application.
+				LAW Version 1.0.0.1.0.2
+	
+					Readme
 
-This file contains a summary of what you will find in each of the files that
-make up your law application.
-
-law.dsp
-    This file (the project file) contains information at the project level and
-    is used to build a single project or subproject. Other users can share the
-    project (.dsp) file, but they should export the makefiles locally.
-
-law.h
-    This is the main header file for the application.  It includes other
-    project specific headers (including Resource.h) and declares the
-    CLawApp application class.
-
-law.cpp
-    This is the main application source file that contains the application
-    class CLawApp.
-
-law.rc
-    This is a listing of all of the Microsoft Windows resources that the
-    program uses.  It includes the icons, bitmaps, and cursors that are stored
-    in the RES subdirectory.  This file can be directly edited in Microsoft
-	Visual C++.
-
-law.clw
-    This file contains information used by ClassWizard to edit existing
-    classes or add new classes.  ClassWizard also uses this file to store
-    information needed to create and edit message maps and dialog data
-    maps and to create prototype member functions.
-
-res\law.ico
-    This is an icon file, which is used as the application's icon.  This
-    icon is included by the main resource file law.rc.
-
-res\law.rc2
-    This file contains resources that are not edited by Microsoft 
-	Visual C++.  You should place all resources not editable by
-	the resource editor in this file.
+-------------------------------------------------------------------------------------------------
 
 
 
-/////////////////////////////////////////////////////////////////////////////
 
-For the main frame window:
-
-MainFrm.h, MainFrm.cpp
-    These files contain the frame class CMainFrame, which is derived from
-    CFrameWnd and controls all SDI frame features.
-
-res\Toolbar.bmp
-    This bitmap file is used to create tiled images for the toolbar.
-    The initial toolbar and status bar are constructed in the CMainFrame
-    class. Edit this toolbar bitmap using the resource editor, and
-    update the IDR_MAINFRAME TOOLBAR array in law.rc to add
-    toolbar buttons.
-/////////////////////////////////////////////////////////////////////////////
-
-AppWizard creates one document type and one view:
-
-lawDoc.h, lawDoc.cpp - the document
-    These files contain your CLawDoc class.  Edit these files to
-    add your special document data and to implement file saving and loading
-    (via CLawDoc::Serialize).
-
-lawView.h, lawView.cpp - the view of the document
-    These files contain your CLawView class.
-    CLawView objects are used to view CLawDoc objects.
+	I.   Introduction
+	II.  System Requirements
+	III. How to use LAW
+	IV.  Additional Features
+	V.   FAQ's	
+	VI.  Contact Us
 
 
 
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
 
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named law.pch and a precompiled types file named StdAfx.obj.
+1. Introduction
+   ------------
+	
+	LAW is an acronym for Linux Access from Windows. Its a tool resembling Windows Explorer, only difference being that LAW is meant for Linux filesystems. Using LAW , one can access Linux Filesystems in a Read-Only fashion. i,e. One can explore through the entire Linux Filesystem and view all the files present in the different directories of the tree structured filesystem.
 
-Resource.h
-    This is the standard header file, which defines new resource IDs.
-    Microsoft Visual C++ reads and updates this file.
 
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
+2. System requirements
+   -------------------
 
-AppWizard uses "TODO:" to indicate parts of the source code you
-should add to or customize.
 
-If your application uses MFC in a shared DLL, and your application is 
-in a language other than the operating system's current language, you
-will need to copy the corresponding localized resources MFC42XXX.DLL
-from the Microsoft Visual C++ CD-ROM onto the system or system32 directory,
-and rename it to be MFCLOC.DLL.  ("XXX" stands for the language abbreviation.
-For example, MFC42DEU.DLL contains resources translated to German.)  If you
-don't do this, some of the UI elements of your application will remain in the
-language of the operating system.
+	>> Any Windows NT based OS (Win XP,Win 2000,Win NT)
 
-/////////////////////////////////////////////////////////////////////////////
+	>> LINUX OS (with single partition)
+
+
+3. How to use LAW..
+   -----------------
+	
+
+	LAW works exactly like Windows Explorer. The main window is split into two panes, the left one and the right one. The left one in LAW ,unlike Windows Explorer ,does not show any drives present on ur system but actually shows the "ROOT" of the Linux Filesystem , denoted by "/" . Under it are present the different directories , which differs from system to system. 
+
+
+	The right pane reflects the contents of the selected directory in the left pane. Linux has around 7 different kinds of files and extensions are not considered here , although they can be a part of your filename. The main types of files are :
+
+			1 . Regular File
+			2 . Directory file
+			3 . Device file	
+			4 . Symbolic Link file
+
+	These different files are represented by different icons. The details of icon association are presented in the File Menu.
+
+
+
+4. Additional Features
+   -------------------  
+
+	
+	4.1  File Properties
+	     ---------------
+
+		A right mouse click on the right pane in the main window displays a pop-up menu which contains an option called File Properties. This displays a Dialog Box containing various details. Although there are numerous pieces of information about a file maintained in the Linux Filesystem , we felt that these are the most required from a Windows User's perspective.
+Note that the mouse must be clicked on a file to display its properties.
+
+
+	4.2 Export File
+ 	    -----------
+
+		The second option present in the pop-up menu is the "export file". This is used if you want to transfer a file from the Linux Partition to your Windows partition. LAW currently supports file transfer of sizes upto 4 GB. This option also requires that a file be selected obviously. One can copy a file of his or her choice to any location in the Windows partition provided there is enough disk space available.
+
+
+
+
+5. FAQ's
+   -----
+
+	
+	Q : Will this work on any OS?
+
+	A : No. Currently it has been developed to work only on Win NT based Operating Sytems.
+
+	Q : Why doesn't it work on other Operating systems?
+	
+	A : Because the handling of a Hard Disk is different in non Win-NT systems. 
+
+	Q : I get an error when i execute this LAW. What do i do?	
+
+	A : Ensure that the following hold before running LAW :
+		
+		1 . You are logged in as ADMINISTRATOR
+
+		2 . You have ,the DLL's provided alongwith the application, in either the current 		    directory or your system directory.
+
+	Q : Are the DLL's absolutely necessary?
+
+	A : Yes. If you dont have Visual Studio installed then they are a must. If you already 	  	    have Visual Studio installed on your system , then they are not required.
+
+
+	Q : The application hangs if I click on the "dev" directory.What do i do?
+
+	A : The application hasn't actually hung at that point. On the contrary , it is working a     	    lot. Its just that the "dev" directory has a lot of files which it has to read and 	    	    display(usually aorund 8000 objects!!! imagine Windows Eplorer trying to open a 	  	    folder with so many objects!!!). So just wait patiently for a while , while LAW looks 	    for ur requested files!!! 
+
+
+6 . Contact Us
+    ----------
+
+	This is still a developing product. Many features can still be added to this application. We need your suggestions to improve this product to make it a full fledged Linux Tool. We look forward to your suggestions so that we can deliver a better product. Although this product has been tested rigorously , there are bound to be some mistakes and errors. Please report any exceptions , errors or bugs noticed during usage to any of the following email addresses and we will certainly get back to you :
+
+		s_murally@yahoo.com
+
+		hvgirish@yahoo.co.in
+
+		zipschumi@yahoo.com
+
+		latha_prakar@yahoo.co.in
+
+
+	Happy Exploring!!!!!			
