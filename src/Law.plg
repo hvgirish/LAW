@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: law - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/law.res" /d "_DEBUG" /d "_AFXDLL" "H:\Documents and Settings\Girish\Desktop\law062104\law062104\law.rc"" 
+Creating temporary file "H:\DOCUME~1\Girish\LOCALS~1\Temp\RSP4B.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/law.pdb" /debug /machine:I386 /out:"Debug/law.exe" /pdbtype:sept 
+".\Debug\law.obj"
+".\Debug\lawDoc.obj"
+".\Debug\lawView.obj"
+".\Debug\LeftView.obj"
+".\Debug\Leged.obj"
+".\Debug\MainFrm.obj"
+".\Debug\properties.obj"
+".\Debug\Splashm.obj"
+".\Debug\StdAfx.obj"
+".\Debug\law.res"
+]
+Creating command line "link.exe @H:\DOCUME~1\Girish\LOCALS~1\Temp\RSP4B.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+law.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
